@@ -86,6 +86,16 @@ null 在這裡表示沒有可計算的平均分數。沒有評分，和平均得
 
 這樣放回整張圖，我就比較不會把「安排工作順序」、「永久保存資料」和「到時間觸發工作」混在一起。
 
+## Day 1 的實作與流程圖
+
+今天的實作畫面與流程整理，也一併保留在這裡，方便和前面的說明對照。
+
+![Day 1 原始學習紀錄圖 1](https://github.com/user-attachments/assets/082b123f-d5e3-4548-8679-84c4dac3e432)
+
+![Day 1 原始學習紀錄圖 2](https://github.com/user-attachments/assets/98bd897e-a31f-4aba-b895-3cfb92431fa1)
+
+![Day 1 原始學習紀錄圖 3](https://github.com/user-attachments/assets/ea10db43-7ce0-47c5-aed5-6fe6abb8cac9)
+
 ## 今天最想記住的，是 ADK 與 Gemini 的分工
 
 我在學習紀錄裡留下這句話：
