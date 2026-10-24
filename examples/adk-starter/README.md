@@ -1,4 +1,4 @@
-# Day 4：最小 TypeScript ADK agent
+# Day 2：最小 TypeScript ADK agent
 
 對照 [官方 TypeScript Quickstart](https://adk.dev/get-started/typescript/)。此起點只定義一個 LlmAgent，尚未接工具、graph、Firestore 或 LINE。模型呼叫需要自己的 Gemini API key 與可用配額。
 
@@ -14,7 +14,7 @@ npm install
 cp .env.example .env
 ```
 
-官方 Quickstart 在 2026-10-24 列出 Node ≥24.13.0、npm ≥11.8.0。舊 Bot 的 Node 20 環境需要另外確認。`@google/adk` 與 devtools 固定為 2.3.0，第一次安裝後保存 lockfile，記下實際版本。Zod 用於 Day 6～7 的工具參數。
+官方 Quickstart 在 2026-10-24 列出 Node ≥24.13.0、npm ≥11.8.0。舊 Bot 的 Node 20 環境需要另外確認。`@google/adk` 與 devtools 固定為 2.3.0，第一次安裝後保存 lockfile，記下實際版本。Zod 用於 Day 3～4 的工具參數。
 
 用編輯器在 `.env` 的 `GEMINI_API_KEY` 填入自己的 key，再執行：
 
@@ -33,4 +33,4 @@ npm run agent
 
 ## 驗證狀態
 
-agent 結構依官方範例編寫；本次交付未安裝 ADK 相依套件、未使用個人 API key，也未執行真實模型連線。Day 4 以自己的環境跑完後，把實際套件版本與回覆加入學習紀錄。離線練習的驗證不代表此模型範例已完成整合驗證。
+agent 結構依官方範例編寫；本次交付未安裝 ADK 相依套件、未使用個人 API key，也未執行真實模型連線。Day 2 以自己的環境跑完後，把實際套件版本與回覆加入學習紀錄。離線練習的驗證不代表此模型範例已完成整合驗證。

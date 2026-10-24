@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import {LlmAgent} from '@google/adk';
 
-// Day 4 起點：還沒有工具或真實咖啡資料。
+// Day 2 起點：還沒有工具或真實咖啡資料。
 // 改用其他模型時，以自己帳號可用的 model ID 為準。
 export const rootAgent = new LlmAgent({
   name: 'cafe_learning_agent',

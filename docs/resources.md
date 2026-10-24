@@ -4,15 +4,15 @@
 
 | 資源 | 何時讀 | 抓哪個重點 |
 | --- | --- | --- |
-| [ADK 首頁](https://adk.dev/) | Day 2 | 框架與模型的分工 |
+| [ADK 首頁](https://adk.dev/) | Day 1 | 框架與模型的分工 |
 | [Welcome to ADK 2.0](https://adk.dev/2.0/) | 起步時 | 2.x graph 與 1.x 相容性說明 |
-| [TypeScript Quickstart](https://adk.dev/get-started/typescript/) | Day 4 | 環境、LlmAgent、開發 CLI |
-| [Function tools](https://adk.dev/tools-custom/function-tools/) | Day 6～7 | 工具描述、參數與 execute |
-| [Conversational context](https://adk.dev/sessions/) | Day 8 | Session、state、memory |
-| [Graph Workflows](https://adk.dev/graphs/) | Day 11 | Workflow、node、edges |
-| [Data handling](https://adk.dev/graphs/data-handling/) | Day 12 | 節點資料與 schema |
-| [Graph routes](https://adk.dev/graphs/routes/) | Day 13～14 | 條件、分支與匯合 |
-| [Why evaluate agents](https://adk.dev/evaluate/) | Day 25 | 結果與執行路徑；頁面工具流程主要標示 Python |
+| [TypeScript Quickstart](https://adk.dev/get-started/typescript/) | Day 2 | 環境、LlmAgent、開發 CLI |
+| [Function tools](https://adk.dev/tools-custom/function-tools/) | Day 3～4 | 工具描述、參數與 execute |
+| [Conversational context](https://adk.dev/sessions/) | Day 4 | Session、state、memory |
+| [Graph Workflows](https://adk.dev/graphs/) | Day 6 | Workflow、node、edges |
+| [Data handling](https://adk.dev/graphs/data-handling/) | Day 6 | 節點資料與 schema |
+| [Graph routes](https://adk.dev/graphs/routes/) | Day 7 | 條件、分支與匯合 |
+| [Why evaluate agents](https://adk.dev/evaluate/) | Day 13 | 結果與執行路徑；頁面工具流程主要標示 Python |
 | [google/adk-js](https://github.com/google/adk-js) | 查 API 時 | TypeScript 原始碼與版本 |
 
 ## 本次確認的版本差異

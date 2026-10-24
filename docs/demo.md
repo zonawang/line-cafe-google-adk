@@ -1,6 +1,6 @@
 # 三分鐘 demo 與五個驗收案例
 
-以下是目標驗收表，初始狀態全部未執行。Day 20 先做前三個，Day 25 完成五個。這份人工驗收表不採用 ADK Python evalset 格式，避免在 TypeScript 入門時多學一套工具。
+以下是目標驗收表，初始狀態全部未執行。Day 10 先做前三個，Day 13 完成五個。這份人工驗收表不採用 ADK Python evalset 格式，避免在 TypeScript 入門時多學一套工具。
 
 ## Demo 順序
 

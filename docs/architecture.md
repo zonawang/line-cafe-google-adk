@@ -4,7 +4,7 @@
 
 | 元件 | 負責什麼 | 本月怎麼處理 |
 | --- | --- | --- |
-| LINE／Express | 簽章、event、actor、回覆 | 到 Day 21 才接一個護照入口 |
+| LINE／Express | 簽章、event、actor、回覆 | 到 Day 11 才接一個護照入口 |
 | ADK Workflow | 節點順序、輸入輸出與分支 | 本月新學的核心 |
 | 一般 TypeScript | 日期、去重、平均分與空值 | 優先保留既有算法 |
 | Gemini | 統計的短摘要 | 範圍限制在已給資料 |
