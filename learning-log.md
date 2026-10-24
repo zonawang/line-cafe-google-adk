@@ -4,7 +4,7 @@
 
 | Day | 日期 | 今天一句理解 | 實作證據 | 下次的問題 | 狀態 |
 | --- | --- | --- | --- | --- | --- |
-| 01 | 待填 | 待填 | <img width="917" height="376" alt="image" src="https://github.com/user-attachments/assets/082b123f-d5e3-4548-8679-84c4dac3e432" /> <img width="989" height="456" alt="image" src="https://github.com/user-attachments/assets/98bd897e-a31f-4aba-b895-3cfb92431fa1" />| 待填 | 未開始 |
+| 01 | 10/24 | 「先讀紀錄，再算統計，最後寫摘要」由 ADK 編排；「把統計寫成自然的兩句話」由 Gemini 生成。 | <img width="917" height="376" alt="image" src="https://github.com/user-attachments/assets/082b123f-d5e3-4548-8679-84c4dac3e432" /> <img width="989" height="456" alt="image" src="https://github.com/user-attachments/assets/98bd897e-a31f-4aba-b895-3cfb92431fa1" /> <img width="967" height="484" alt="image" src="https://github.com/user-attachments/assets/ea10db43-7ce0-47c5-aed5-6fe6abb8cac9" />| 待填 | done |
 | 02 | 待填 | 待填 | 待填 | 待填 | 未開始 |
 | 03 | 待填 | 待填 | 待填 | 待填 | 未開始 |
 | 04 | 待填 | 待填 | 待填 | 待填 | 未開始 |
