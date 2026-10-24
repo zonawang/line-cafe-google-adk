@@ -30,6 +30,10 @@ Google ADK，全名是 Agent Development Kit，是 Google 提供的開源 AI age
 - 摘要：Gemini 根據統計，寫成兩句自然的回顧。
 - LINE 回覆：程式把結果組成訊息並送出。
 
+![咖啡護照五步流程：接收指令、讀取資料、統計、Gemini 摘要與 LINE 回覆](https://github.com/user-attachments/assets/98bd897e-a31f-4aba-b895-3cfb92431fa1)
+
+*圖 1｜咖啡護照的五個步驟，標出程式與 AI 各自負責的工作。*
+
 拆開之後就比較清楚了：整個流程裡，只有摘要這一步需要生成文字。讀取資料、算平均分數和組成訊息，都有明確的程式規則。
 
 接下來想用 ADK 練習的，就是把這些步驟組織起來，讓先後順序、資料交接和不同情況的處理方式更容易看懂。
@@ -68,6 +72,10 @@ ADK 的 graph workflow 能把這些步驟與關係定義在程式裡。節點可
 
 null 在這裡表示沒有可計算的平均分數。沒有評分，和平均得到 0 分，是不同的意思。
 
+![Day 1 離線範例的正常資料與空資料執行結果](https://github.com/user-attachments/assets/082b123f-d5e3-4548-8679-84c4dac3e432)
+
+*圖 2｜同一份離線範例分別使用正常資料與空資料執行。摘要仍由固定文案產生，尚未呼叫 AI。*
+
 兩種情境都跑過後，我比較能把輸入、處理步驟與輸出連在一起看：同一條流程收到不同資料，就會得到不同結果。
 
 這個練習還沒有執行 ADK，也沒有呼叫 Gemini。最後的摘要是固定文案，先用來觀察資料流；之後才會把需要生成文字的節點接上模型。
@@ -84,17 +92,11 @@ null 在這裡表示沒有可計算的平均分數。沒有評分，和平均得
 
 例如原本的咖啡提醒，需要到時間再傳 LINE 訊息，就會用到這類排程能力。查看咖啡護照則先走資料讀取、統計與摘要的主流程。
 
+![Firestore、Cloud Tasks、ADK 與 Gemini 在咖啡 Bot 中的目標分工架構](https://github.com/user-attachments/assets/ea10db43-7ce0-47c5-aed5-6fe6abb8cac9)
+
+*圖 3｜把資料庫、排程、流程編排與模型放回同一張圖。圖中的 ADK 編排是接下來要實作的目標架構。*
+
 這樣放回整張圖，我就比較不會把「安排工作順序」、「永久保存資料」和「到時間觸發工作」混在一起。
-
-## Day 1 的實作與流程圖
-
-今天的實作畫面與流程整理，也一併保留在這裡，方便和前面的說明對照。
-
-![Day 1 原始學習紀錄圖 1](https://github.com/user-attachments/assets/082b123f-d5e3-4548-8679-84c4dac3e432)
-
-![Day 1 原始學習紀錄圖 2](https://github.com/user-attachments/assets/98bd897e-a31f-4aba-b895-3cfb92431fa1)
-
-![Day 1 原始學習紀錄圖 3](https://github.com/user-attachments/assets/ea10db43-7ce0-47c5-aed5-6fe6abb8cac9)
 
 ## 今天最想記住的，是 ADK 與 Gemini 的分工
 
