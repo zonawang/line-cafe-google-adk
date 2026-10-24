@@ -2,7 +2,7 @@
 
 Day 1 是完整概念文章；Day 2～15 是合併相關觀念後的短文草稿。每天可寫 300～500 字，加一個真實結果與一個心得。未完成實作先標待續，最後再整理成主文。
 
-- [Day 01：咖啡 Bot 已經有流程，Google ADK 會放在哪裡？](day-01.md)
+- [Day 01：咖啡 Bot 做完之後，我想帶著原本的專案認識 Google ADK](day-01.md)
 - [Day 02：先挑一條小流程，再建立第一個 Google ADK agent](day-02.md)
 - [Day 03：Agent 怎麼從「會說明」變成「會用資料回答」？](day-03.md)
 - [Day 04：參數與記憶都有邊界：schema、session 與咖啡紀錄](day-04.md)

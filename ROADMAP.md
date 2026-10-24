@@ -12,7 +12,7 @@
 
 | 完成 | Day／建議日期 | 學習與實作 | 文章 |
 | --- | --- | --- | --- |
-| ☐ | 01／10/24 | [Graph workflow 與 ADK：看懂整個 Bot 的分工](lessons/day-01.md) | [咖啡 Bot 已經有流程，Google ADK 會放在哪裡？](articles/day-01.md) |
+| ☐ | 01／10/24 | [Graph workflow 與 ADK：看懂整個 Bot 的分工](lessons/day-01.md) | [咖啡 Bot 做完之後，我想帶著原本的專案認識 Google ADK](articles/day-01.md) |
 | ☐ | 02／10/25 | [選定護照主線，跑出第一個 agent](lessons/day-02.md) | [先挑一條小流程，再建立第一個 Google ADK agent](articles/day-02.md) |
 
 ## Phase 2｜Tools 與執行脈絡（Day 3～5）
