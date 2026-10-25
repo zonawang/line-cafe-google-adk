@@ -40,12 +40,13 @@ flowchart LR
 2. 花 25～30 分鐘完成三個小步驟，留下一個可檢查的成果。
 3. 花 10～15 分鐘改寫文章草稿、補入真實輸出，更新[學習紀錄](learning-log.md)。
 
-文章預設每天 300～500 字。Day 1 是完整概念文章，後面 14 篇是短文草稿，實作結果由每天補入。Day 5、10、15 保留整理時間；可隔天學一次，用剩餘時間複習與準備分享。
+文章預設每天 300～500 字。Day 1、Day 2 已整理成完整文章，後面 13 篇是短文草稿，實作結果由每天補入。Day 5、10、15 保留整理時間；可隔天學一次，用剩餘時間複習與準備分享。
 
 ## 文件入口
 
 | 想做什麼 | 入口 |
 | --- | --- |
+| 今日 Medium 文章 | [medium.md](medium.md) |
 | 找每天的任務與文章 | [ROADMAP](ROADMAP.md)、[lessons](lessons/README.md)、[articles](articles/README.md) |
 | 第一天就動手 | [離線資料流練習](examples/README.md)與[完整概念文章](articles/day-01.md) |
 | Day 2 跑 agent | [TypeScript starter](examples/adk-starter/README.md) |

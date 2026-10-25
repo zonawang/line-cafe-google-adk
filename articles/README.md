@@ -1,9 +1,11 @@
 # 每日文章：15 天版
 
-Day 1 是完整概念文章；Day 2～15 是合併相關觀念後的短文草稿。每天可寫 300～500 字，加一個真實結果與一個心得。未完成實作先標待續，最後再整理成主文。
+Day 1、Day 2 已整理成完整文章；Day 3～15 是合併相關觀念後的短文草稿。每天可寫 300～500 字，加一個真實結果與一個心得。未完成實作先標待續，最後再整理成主文。
+
+[今天的 Medium 完整版](https://github.com/zonawang/line-cafe-google-adk/blob/main/medium.md)
 
 - [Day 01：咖啡 Bot 做完之後，我想帶著原本的專案認識 Google ADK](day-01.md)
-- [Day 02：先挑一條小流程，再建立第一個 Google ADK agent](day-02.md)
+- [Day 02：第一個 ADK agent 一直沒有回答：我從 504 逾時，開始看懂模型與任務的分工](day-02.md)
 - [Day 03：Agent 怎麼從「會說明」變成「會用資料回答」？](day-03.md)
 - [Day 04：參數與記憶都有邊界：schema、session 與咖啡紀錄](day-04.md)
 - [Day 05：除了答案，我還要看見 agent 做過的步驟](day-05.md)
