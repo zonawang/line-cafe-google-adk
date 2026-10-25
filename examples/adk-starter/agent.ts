@@ -6,6 +6,13 @@ import {LlmAgent} from '@google/adk';
 export const rootAgent = new LlmAgent({
   name: 'cafe_learning_agent',
   model: process.env.GEMINI_MODEL || 'gemini-flash-latest',
+  // 入門練習先限制等待時間，讓連線問題能及早顯示。
+  generateContentConfig: {
+    httpOptions: {
+      timeout: 30_000,
+      retryOptions: {attempts: 1},
+    },
+  },
   description: '用繁體中文簡短說明咖啡護照的學習助理。',
   instruction: [
     '請用繁體中文，最多兩句話，說明咖啡護照可以整理造訪紀錄與評分。',
