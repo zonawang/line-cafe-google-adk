@@ -32,6 +32,9 @@ npm run agent
 - 401／403：確認 key、帳號權限與 API 設定；不要把 key 貼到文章或 repo。
 - 模型不存在：將 `GEMINI_MODEL` 改成自己帳號可用的 ID，記下版本。
 - 429：查看帳號配額並減少重跑，可先完成流程圖與筆記。
+- 504 或長時間停在 Sending out request：本次測試中 `gemini-flash-latest` 在 ADK 與直接 API 呼叫都發生逾時；同一把 key 改用 `gemini-3.5-flash-lite` 後成功。範例已固定使用後者，模型選擇參考 [官方模型文件](https://ai.google.dev/gemini-api/docs/models)。本機 `.env` 的 `GEMINI_MODEL` 也要一致，修改後先按 Control＋C，再重新啟動。
+
+範例的模型請求設有 30 秒逾時，且只嘗試一次，方便遇到連線問題時取得明確錯誤。
 
 ## 驗證狀態
 
@@ -42,4 +45,10 @@ npm run agent
 - agent.ts 語法檢查與模組載入成功，匯出的 agent 沒有工具。
 - CLI 成功顯示 `Running agent cafe_learning_agent` 與 `[user]:` 輸入提示。
 
-尚未送出模型問題，真實 Gemini 回覆仍需在本機設定 API key 後驗證。上述環境檢查不代表已讀取咖啡紀錄或完成 LINE 整合。完成兩個問題後，再把實際回覆加入 Day 2 學習紀錄與文章。
+同日另完成真實 Gemini API 與 ADK CLI 驗證：
+
+- `gemini-flash-latest` 的直接呼叫在約 29 秒後收到 504；改用 `gemini-3.5-flash-lite`，約 1.35 秒回覆「連線成功」。這是本次觀察，不代表模型的長期效能或可用性保證。
+- ADK 使用 `gemini-3.5-flash-lite`，回答「咖啡護照能幫我做什麼？」：「咖啡護照可以幫您整理咖啡廳的造訪紀錄與評分。目前尚未提供您的個人資料，無法顯示相關紀錄。」
+- 再問「我這個月去了幾間店？」：「目前您尚未提供個人資料，因此我無法得知您這個月去了幾間店。」
+
+本次已驗證 agent 的模型回覆與資料不足時的表現；尚未接上咖啡紀錄或 LINE。請親手重跑兩個問題，保留自己的畫面，再填入 Day 2 學習紀錄與文章。

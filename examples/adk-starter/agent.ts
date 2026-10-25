@@ -5,7 +5,7 @@ import {LlmAgent} from '@google/adk';
 // 改用其他模型時，以自己帳號可用的 model ID 為準。
 export const rootAgent = new LlmAgent({
   name: 'cafe_learning_agent',
-  model: process.env.GEMINI_MODEL || 'gemini-flash-latest',
+  model: process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite',
   // 入門練習先限制等待時間，讓連線問題能及早顯示。
   generateContentConfig: {
     httpOptions: {
