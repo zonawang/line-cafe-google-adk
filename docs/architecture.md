@@ -1,49 +1,34 @@
-# 本月的目標架構
+# 已實作的第一版架構
 
-此頁是待逐步實作的設計。原有程式已經能產生咖啡護照，本月比較的是同一條流程如何用 ADK 組織。
-
-| 元件 | 負責什麼 | 本月怎麼處理 |
-| --- | --- | --- |
-| LINE／Express | 簽章、event、actor、回覆 | 到 Day 11 才接一個護照入口 |
-| ADK Workflow | 節點順序、輸入輸出與分支 | 本月新學的核心 |
-| 一般 TypeScript | 日期、去重、平均分與空值 | 優先保留既有算法 |
-| Gemini | 統計的短摘要 | 範圍限制在已給資料 |
-| Firestore | 足跡與收藏等永久資料 | 先 fixture，再透過 adapter 接回 |
-| Cloud Tasks | 指定時間觸發提醒 | 本月保留原設計，概念對照即可 |
+目前應用位於 application/，涵蓋護照與唯讀紀錄查詢。正式服務連線尚未驗證。
 
 ```mermaid
 flowchart TD
-    E[已驗證 LINE event] --> H[護照 handler]
-    H --> I[可信 actor 與已驗證 period]
-    I --> A[records adapter]
-    A --> B[buildPassportStats]
-    B --> C{totalVisits 大於 0}
-    C -->|否| N[空紀錄文案]
-    C -->|是| D[摘要模型節點]
-    D --> O[統計與摘要結果]
-    D -.預期模型錯誤.-> F[固定摘要]
-    F --> O
-    N --> O
-    O --> M[createPassportMessages]
-    M --> L[LINE 回覆]
+  E[LINE 簽章驗證] --> A[可信 userId 與一對一聊天室]
+  A --> H{護照指令或自然語言}
+  H -->|護照| W[ADK Workflow]
+  H -->|查詢| Q[LlmAgent 與 Runner]
+  W --> R[RecordsStore]
+  Q --> T[兩個唯讀 FunctionTool]
+  T --> R
+  R --> F[Fixture 或 Firestore adapter]
+  W --> S[原統計算法]
+  S --> C{有造訪紀錄嗎}
+  C -->|否| N[零筆文案]
+  C -->|是| M[摘要 LlmAgent]
+  M -->|失敗或超時| B[固定摘要]
+  M --> L[沿用 LINE 卡片]
+  B --> L
+  N --> L
 ```
 
-## 三份小資料契約
+模型不能指定 ownerId。工具以閉包綁定已驗證 actor，RecordsStore 再檢查紀錄 ownerId。不同 userId／conversationId 使用不同 session。對話 Session 暫存記憶體，業務足跡仍放 Firestore。
 
-以下是設計形狀，實作時需補足型別與 Zod schema。
+Workflow 經 Runner 產生真實 ADK events。對外診斷只保留節點、工具與 errorCode；原始 Session 仍可能包含工具資料，持久化前需要設計存取與保留規則。
 
-```text
-Request: { actorId, period: all | month | year }
-Records: { journeys, wishlistItems }
-Result:  { stats, summary, summaryMode: model | fallback | empty }
-```
+固定護照流程使用一般函式節點，模型只生成摘要。查詢 Agent 透過工具取得資料，再回答自然語言。合成 Demo 使用腳本模型；真實 Gemini 的工具選擇需另驗證。
 
-actorId 由驗證後的應用事件帶入，不能由模型選擇。模型只接收摘要所需的統計，不接收 LINE token 或任意使用者 ID。每個節點先寫清楚輸入與輸出，不把所有資料都放進全域物件。
+Cloud Tasks、Maps、收藏寫入、群組功能與舊摘要快取仍留在舊應用。此次沒有切換正式 webhook。
 
-## Graph 在這裡解決的問題
+細節：[應用說明](../application/README.md)、[實作狀態](implementation-report.md)。
 
-把必要步驟、例外分支與觀察位置表達在同一份流程定義裡。對這麼小的功能，一般函式也能做得很清楚；學習時應比較兩種組織方式的可讀性與成本。不要以「改用框架」代替實際量測或驗收。
-
-## 後續可延伸
-
-若本月順利完成，再選一項：附近推薦的工具轉接、收藏前確認、出發前健檢的 uncertain 分支。每次仍只增加一條能驗證的小路徑。

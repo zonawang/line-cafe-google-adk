@@ -1,0 +1,330 @@
+{
+  "generatedAt": "2026-11-06T05:37:40.114Z",
+  "disclosure": "OFFLINE: real ADK 2.3.0 runtime + scripted model + synthetic records; ZERO Gemini API calls",
+  "fixtureNow": "2026-11-06T04:00:00.000Z",
+  "adkVersion": "2.3.0",
+  "passport": {
+    "normal": {
+      "result": {
+        "stats": {
+          "period": "month",
+          "periodLabel": "2026 年 11 月",
+          "periodStartMs": 1793462400000,
+          "periodEndMs": 1796054400000,
+          "totalVisits": 3,
+          "uniqueCafeCount": 2,
+          "averageRating": 4,
+          "fiveStarVisits": 1,
+          "topTags": [
+            {
+              "tag": "quiet",
+              "label": "安靜",
+              "count": 2
+            },
+            {
+              "tag": "work",
+              "label": "適合工作",
+              "count": 2
+            }
+          ],
+          "favoriteCafe": {
+            "title": "示範咖啡 A",
+            "uri": "https://www.google.com/maps/search/?api=1&query=Demo+Cafe+A",
+            "visits": 2,
+            "averageRating": 4.5
+          },
+          "latestVisit": {
+            "id": "v3",
+            "ownerId": "demo-user",
+            "conversationId": "demo-user",
+            "cafeTitle": "示範咖啡 B",
+            "cafeUri": "https://www.google.com/maps/search/?api=1&query=Demo+Cafe+B",
+            "rating": 3,
+            "tags": [
+              "quiet"
+            ],
+            "status": "completed",
+            "createdAtMs": 1793858400000,
+            "visitedAtMs": 1793858400000
+          },
+          "currentWishlistCount": 3,
+          "wishlistVisitedCount": 1
+        },
+        "limitReached": false,
+        "summary": "2026 年 11 月完成 3 次咖啡造訪，走訪 2 間店。最常造訪的是示範咖啡 A。",
+        "summaryMode": "model"
+      },
+      "trace": [
+        {
+          "author": "read_records",
+          "node": "cafe_passport.read_records",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "calculate_stats",
+          "node": "cafe_passport.calculate_stats",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "has_visits",
+          "node": "cafe_passport.has_visits",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "passport_summary",
+          "node": "cafe_passport.summarize_with_fallback.passport_summary@1",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "summarize_with_fallback",
+          "node": "cafe_passport.summarize_with_fallback",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "passport_result",
+          "node": "cafe_passport.passport_result",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        }
+      ]
+    },
+    "empty": {
+      "result": {
+        "stats": {
+          "period": "month",
+          "periodLabel": "2026 年 11 月",
+          "periodStartMs": 1793462400000,
+          "periodEndMs": 1796054400000,
+          "totalVisits": 0,
+          "uniqueCafeCount": 0,
+          "fiveStarVisits": 0,
+          "topTags": [],
+          "currentWishlistCount": 0,
+          "wishlistVisitedCount": 0
+        },
+        "limitReached": false,
+        "summary": "2026 年 11 月還沒有完成的咖啡足跡。",
+        "summaryMode": "empty"
+      },
+      "trace": [
+        {
+          "author": "read_records",
+          "node": "cafe_passport.read_records",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "calculate_stats",
+          "node": "cafe_passport.calculate_stats",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "has_visits",
+          "node": "cafe_passport.has_visits",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "empty_passport",
+          "node": "cafe_passport.empty_passport",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "passport_result",
+          "node": "cafe_passport.passport_result",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        }
+      ]
+    },
+    "simulatedModelFailure": {
+      "result": {
+        "stats": {
+          "period": "month",
+          "periodLabel": "2026 年 11 月",
+          "periodStartMs": 1793462400000,
+          "periodEndMs": 1796054400000,
+          "totalVisits": 3,
+          "uniqueCafeCount": 2,
+          "averageRating": 4,
+          "fiveStarVisits": 1,
+          "topTags": [
+            {
+              "tag": "quiet",
+              "label": "安靜",
+              "count": 2
+            },
+            {
+              "tag": "work",
+              "label": "適合工作",
+              "count": 2
+            }
+          ],
+          "favoriteCafe": {
+            "title": "示範咖啡 A",
+            "uri": "https://www.google.com/maps/search/?api=1&query=Demo+Cafe+A",
+            "visits": 2,
+            "averageRating": 4.5
+          },
+          "latestVisit": {
+            "id": "v3",
+            "ownerId": "demo-user",
+            "conversationId": "demo-user",
+            "cafeTitle": "示範咖啡 B",
+            "cafeUri": "https://www.google.com/maps/search/?api=1&query=Demo+Cafe+B",
+            "rating": 3,
+            "tags": [
+              "quiet"
+            ],
+            "status": "completed",
+            "createdAtMs": 1793858400000,
+            "visitedAtMs": 1793858400000
+          },
+          "currentWishlistCount": 3,
+          "wishlistVisitedCount": 1
+        },
+        "limitReached": false,
+        "summary": "2026 年 11 月完成 3 次造訪，共 2 間店。平均評分 4 分。",
+        "summaryMode": "fallback"
+      },
+      "trace": [
+        {
+          "author": "read_records",
+          "node": "cafe_passport.read_records",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "calculate_stats",
+          "node": "cafe_passport.calculate_stats",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "has_visits",
+          "node": "cafe_passport.has_visits",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "passport_summary",
+          "node": "cafe_passport.summarize_with_fallback.passport_summary@1",
+          "errorCode": "UNKNOWN_ERROR",
+          "tools": [],
+          "responses": [],
+          "hasOutput": false
+        },
+        {
+          "author": "summarize_with_fallback",
+          "node": "cafe_passport.summarize_with_fallback",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        },
+        {
+          "author": "passport_result",
+          "node": "cafe_passport.passport_result",
+          "tools": [],
+          "responses": [],
+          "hasOutput": true
+        }
+      ]
+    }
+  },
+  "query": {
+    "question": {
+      "text": "本月有 3 次造訪，最常去的是 示範咖啡 A。在已讀取足跡中尚未造訪的收藏有 示範咖啡 D、示範咖啡 E。",
+      "trace": [
+        {
+          "author": "cafe_query_agent",
+          "tools": [
+            "get_passport_stats"
+          ],
+          "responses": [],
+          "hasOutput": false
+        },
+        {
+          "author": "cafe_query_agent",
+          "tools": [],
+          "responses": [
+            "get_passport_stats"
+          ],
+          "hasOutput": false
+        },
+        {
+          "author": "cafe_query_agent",
+          "tools": [
+            "list_unvisited_wishlist"
+          ],
+          "responses": [],
+          "hasOutput": false
+        },
+        {
+          "author": "cafe_query_agent",
+          "tools": [],
+          "responses": [
+            "list_unvisited_wishlist"
+          ],
+          "hasOutput": false
+        },
+        {
+          "author": "cafe_query_agent",
+          "tools": [],
+          "responses": [],
+          "hasOutput": false
+        }
+      ],
+      "mode": "answer"
+    },
+    "followup": {
+      "text": "依你留下的工作標籤，本月有 2 次造訪，最常去 示範咖啡 A。上一輪尚未造訪的收藏沒有設施證據，無法確認是否適合工作。",
+      "trace": [
+        {
+          "author": "cafe_query_agent",
+          "tools": [
+            "get_passport_stats"
+          ],
+          "responses": [],
+          "hasOutput": false
+        },
+        {
+          "author": "cafe_query_agent",
+          "tools": [],
+          "responses": [
+            "get_passport_stats"
+          ],
+          "hasOutput": false
+        },
+        {
+          "author": "cafe_query_agent",
+          "tools": [],
+          "responses": [],
+          "hasOutput": false
+        }
+      ],
+      "mode": "answer"
+    }
+  },
+  "liveGeminiBenchmarks": "not measured"
+}
