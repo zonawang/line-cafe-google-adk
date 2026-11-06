@@ -1,5 +1,7 @@
 # 官方資源與版本筆記
 
+> 2026-11-06 實作補充：application 已安裝並驗證 @google/adk 2.3.0。Workflow 執行時仍顯示 experimental 提示，因此使用固定版本與驗收案例。真實 Gemini、LINE、Firestore 連線尚未驗證。此次 TypeScript 驗收使用 Node test runner，沒有直接套用官方標示 Python 的 eval 流程。
+
 查核日：2026-10-24。這份教材使用 TypeScript；Python 範例只作觀念參考，不能直接把 import 或執行指令搬進 TypeScript。
 
 | 資源 | 何時讀 | 抓哪個重點 |
@@ -24,3 +26,4 @@
 - TypeScript starter 採 Quickstart 的 `GEMINI_API_KEY`；舊 Bot 則透過 Google Cloud ADC 呼叫服務。兩種設定不要混用。未來接回既有 GCP 專案時，再依官方模型與驗證文件設定。
 
 ADK 是開源框架；呼叫模型及雲端服務的費用與配額依帳號設定而異，本教材不假設永遠免費。先以小 fixture 完成概念練習。
+

@@ -1,5 +1,7 @@
 # 用既有 LINE Cafe Bot，15 天看懂 Google ADK
 
+> **2026-11-06 更新：第一版應用已完成。** [application](application/README.md) 提供可執行的 ADK 護照 Workflow、唯讀工具查詢與 LINE／Firestore adapters。26 項離線驗證通過，尚未連線真實 Gemini／LINE／Firestore 或部署。開發者分享見 [35 分鐘講稿](docs/talk-35min.md) 與 [實作狀態](docs/implementation-report.md)。下方 15 天路線保留為學習教材，未代表每一天都已由使用者完成。
+
 每天 **45～60 分鐘**，用一到兩個相關概念搭配一個小實作，再寫一篇短文。學完能用自己的咖啡 Bot 說明 ADK 的用途，並準備十五分鐘分享。
 
 **先看 [15 天 roadmap](ROADMAP.md)，今天從 [Day 01](lessons/day-01.md) 開始。** Day 1 的離線練習不需要 API key。
@@ -19,7 +21,7 @@ flowchart LR
     E --> M
 ```
 
-這是逐日實作的目標架構。已提供教材、文章草稿、離線練習與最小 agent 起點；完整 ADK／Firestore／LINE 整合仍是待完成任務。
+這張圖對應 application 中已完成的護照流程。教材與文章仍可逐日閱讀；真實服務連線與完整 Bot 遷移另列於實作狀態。
 
 選擇這條主線，是因為既有 `line-cafe-passport` 已分開資料讀取、統計、摘要與卡片，適合小範圍改造。依 2026-10-24 查核，已讀 13 個舊 `line-cafe-*` repo 的 README、檔案樹與代表程式，另查看 5 個相關專案，詳見[盤點](docs/repo-audit.md)。
 
@@ -61,3 +63,4 @@ flowchart LR
 截至 2026-10-24，官方 TypeScript Quickstart 列出 Node ≥24.13.0、npm ≥11.8.0，與舊 Bot 的 Node 20 環境分開確認。[官方 Quickstart](https://adk.dev/get-started/typescript/)
 
 先做單一 agent、唯讀 tools 與小 graph。並行與人類確認先用圖解，多 agent、RAG、MCP、A2A 與完整部署留待需求出現時延伸。
+

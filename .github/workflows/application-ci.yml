@@ -1,0 +1,23 @@
+name: Cafe ADK application
+on:
+  push:
+    paths: ['application/**', '.github/workflows/application-ci.yml']
+  pull_request:
+    paths: ['application/**', '.github/workflows/application-ci.yml']
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: application
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: corepack enable && corepack prepare pnpm@11.25.0 --activate
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm build
+      - run: pnpm test
+      - run: pnpm demo --output demo-report.json
+

@@ -1,5 +1,7 @@
 # 三分鐘 demo 與五個驗收案例
 
+> 2026-11-06：可執行版見 [application/README.md](../application/README.md)，實際輸出見 [demo-report.json](../application/docs/demo-report.json)。使用真正 ADK runtime、合成資料與腳本模型，26 項測試通過。下方保留原學習驗收設計，未代表真實雲端服務整合完成。
+
 以下是目標驗收表，初始狀態全部未執行。Day 10 先做前三個，Day 13 完成五個。這份人工驗收表不採用 ADK Python evalset 格式，避免在 TypeScript 入門時多學一套工具。
 
 ## Demo 順序
@@ -33,3 +35,4 @@
 ## 可以延後的事
 
 完整 Firestore 與真實 LINE channel 若尚未完成，可展示本機 graph 加模擬 handler；在講稿與畫面標示範圍。實機 demo 則需另外完成 channel、憑證與部署驗證，不能以離線結果推論已串接成功。
+
